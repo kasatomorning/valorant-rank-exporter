@@ -26,7 +26,7 @@ class regularlyGetInfo(threading.Thread):
 class player:
     g = Gauge(
         "valo_rating",
-        "",
+        "metrics for valorant rating",
         ["playername"],
     )
 
