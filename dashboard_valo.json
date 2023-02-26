@@ -1,0 +1,134 @@
+{
+    "id": 2,
+    "gridPos": {
+      "h": 31,
+      "w": 20,
+      "x": 1,
+      "y": 0
+    },
+    "type": "timeseries",
+    "title": "ss19_valorant_rating",
+    "datasource": {
+      "type": "prometheus",
+      "uid": "z5HOcHJ4k"
+    },
+    "description": "",
+    "fieldConfig": {
+      "defaults": {
+        "custom": {
+          "drawStyle": "line",
+          "lineInterpolation": "linear",
+          "barAlignment": 0,
+          "lineWidth": 3,
+          "fillOpacity": 0,
+          "gradientMode": "none",
+          "spanNulls": false,
+          "showPoints": "auto",
+          "pointSize": 5,
+          "stacking": {
+            "mode": "none",
+            "group": "A"
+          },
+          "axisPlacement": "left",
+          "axisLabel": "rating",
+          "axisColorMode": "text",
+          "scaleDistribution": {
+            "type": "linear"
+          },
+          "axisCenteredZero": false,
+          "hideFrom": {
+            "tooltip": false,
+            "viz": false,
+            "legend": false
+          },
+          "thresholdsStyle": {
+            "mode": "off"
+          },
+          "axisWidth": 35,
+          "lineStyle": {
+            "fill": "solid"
+          }
+        },
+        "color": {
+          "mode": "palette-classic"
+        },
+        "mappings": [],
+        "thresholds": {
+          "mode": "absolute",
+          "steps": [
+            {
+              "color": "green",
+              "value": null
+            },
+            {
+              "color": "red",
+              "value": 80
+            }
+          ]
+        }
+      },
+      "overrides": []
+    },
+    "options": {
+      "tooltip": {
+        "mode": "single",
+        "sort": "none"
+      },
+      "legend": {
+        "showLegend": true,
+        "displayMode": "list",
+        "placement": "right",
+        "calcs": []
+      }
+    },
+    "targets": [
+      {
+        "datasource": {
+          "type": "prometheus",
+          "uid": "z5HOcHJ4k"
+        },
+        "editorMode": "code",
+        "exemplar": false,
+        "expr": "U23_rating{}",
+        "legendFormat": "U23",
+        "range": true,
+        "refId": "U23"
+      },
+      {
+        "datasource": {
+          "type": "prometheus",
+          "uid": "z5HOcHJ4k"
+        },
+        "editorMode": "code",
+        "expr": "mut_rating{}",
+        "hide": false,
+        "legendFormat": "mut",
+        "range": true,
+        "refId": "mut"
+      },
+      {
+        "datasource": {
+          "type": "prometheus",
+          "uid": "z5HOcHJ4k"
+        },
+        "editorMode": "code",
+        "expr": "kasazumi_rating{}",
+        "hide": false,
+        "legendFormat": "KASAZUMI",
+        "range": true,
+        "refId": "KASAZUMI"
+      },
+      {
+        "datasource": {
+          "type": "prometheus",
+          "uid": "z5HOcHJ4k"
+        },
+        "editorMode": "code",
+        "expr": "nic0_rating{}",
+        "hide": false,
+        "legendFormat": "nic0",
+        "range": true,
+        "refId": "nic0"
+      }
+    ]
+  }
